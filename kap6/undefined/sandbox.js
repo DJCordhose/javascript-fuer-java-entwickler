@@ -1,3 +1,5 @@
+"use strict";
+
 var obj = {
     a: null,
     b: undefined,

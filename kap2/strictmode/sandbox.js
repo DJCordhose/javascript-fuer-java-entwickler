@@ -1,4 +1,12 @@
-//"use strict";
+"use strict";
+
+//function oho() {
+//    "use strict";
+////    var hugo = 10;
+//    hugo = 10;
+//    console.log(hugo);
+//}
+//oho();
 
 function aha() {
 //    var hugo = 10;
@@ -8,4 +16,5 @@ function aha() {
 
 aha();
 
-console.log(hugo);
+//console.log(hugo);
+
