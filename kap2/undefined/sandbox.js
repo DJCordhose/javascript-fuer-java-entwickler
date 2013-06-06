@@ -1,11 +1,35 @@
 "use strict";
 
+// undefined
 
-console.log(undefined == undefined);
-console.log(null == null);
-console.log(null == undefined);
+var a;
+console.log(a);
+// => undefined
+console.log(typeof a);
+// => "undefined"
 
-console.log(undefined === undefined);
-console.log(null === null);
-console.log(null !== undefined);
-console.log(typeof(gibtEsNicht) === "undefined");
+if (typeof gibtEsNicht === "undefined") {
+    console.log("Gibt es nicht!");
+} else {
+    console.log("Gibt es!");
+}
+
+var obj = {
+    a: undefined
+};
+console.log(obj.a);
+// => undefined
+console.log(obj.b);
+// => undefined
+
+function n(a) {
+    console.log(a);
+    // => undefined
+}
+var c = n();
+console.log(c);
+// => undefined
+
+
+console.log(gibtEsNicht);
+// => Uncaught ReferenceError: gibtEsNicht is not defined

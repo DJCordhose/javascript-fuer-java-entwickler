@@ -97,4 +97,6 @@ console.log(olli instanceof Object);
 
 // Wir sind nun aber auch ein SingleTasker!
 olli.doExclusively('eat');
+// => Doing exclusively: eat
 olli.doExclusively();
+// => Doing exclusively: sleep
