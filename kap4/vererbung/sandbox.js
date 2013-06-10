@@ -1,5 +1,9 @@
 "use strict";
 
+function _extendsSimple(_sub, _super) {
+    _sub.prototype = new _super();
+}
+
 function _extends(_sub, _super) {
     var IntermediateProto = function () {};
     IntermediateProto.prototype = _super.prototype;
@@ -38,7 +42,9 @@ Person.prototype.getName = function () {
 function Male(name) {
     Person.call(this, name, "Male");
 }
+//_extendsSimple(Male, Person);
 _extends(Male, Person);
+
 /**
  * Gibt den Namen einer männlichen Person zurück.
  *
