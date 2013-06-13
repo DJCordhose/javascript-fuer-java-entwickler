@@ -5,7 +5,7 @@ try {
     // oder
     throw new Error("Fehler");
 } catch (e) {
-    console.log("Gefangen: " + e)
+    console.log("Gefangen: " + e);
 } finally {
-    console.log("Wird immer durchlaufen")
+    console.log("Wird immer durchlaufen");
 }
