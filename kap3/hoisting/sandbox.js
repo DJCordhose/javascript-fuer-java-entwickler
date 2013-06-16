@@ -29,3 +29,18 @@
     var inner1 = function() {};
     function inner2() {}
 })();
+
+// global
+
+a();
+console.log(global);
+
+function a() {
+    console.log("a");
+    b();
+}
+function b() {
+    console.log("b");
+}
+
+var global = "gloabal";
