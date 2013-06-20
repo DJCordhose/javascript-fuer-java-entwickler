@@ -1,8 +1,5 @@
 "use strict";
 
-function _extendsSimple(_sub, _super) {
-    _sub.prototype = new _super();
-}
 
 function _extends(_sub, _super) {
     var IntermediateProto = function () {};
@@ -42,20 +39,33 @@ Person.prototype.getName = function () {
 function Male(name) {
     Person.call(this, name, "Male");
 }
-//_extendsSimple(Male, Person);
 _extends(Male, Person);
 
-console.log(Object.getPrototypeOf(Male.prototype) === Person.prototype);
-// => true
-
 /**
- * Gibt den Namen einer männlichen Person zurück.
- *
- * @returns {string} der Name der Person
  * @override
  */
 Male.prototype.getName = function () {
     return "Mr " +
+        Person.prototype.getName.call(this);
+}
+
+/**
+ * Erzeugt eine weibliche Person.
+ *
+ * @param name
+ * @constructor
+ * @extends Person
+ */
+function Female(name) {
+    Person.call(this, name, "Female");
+}
+_extends(Female, Person);
+
+/**
+ * @override
+ */
+Female.prototype.getName = function () {
+    return "Mrs " +
         Person.prototype.getName.call(this);
 }
 
@@ -65,11 +75,21 @@ Male.prototype.getName = function () {
 var olli = new Male("Olli");
 console.log(olli.getName());
 // => "Mr Olli"
-console.log(olli.gender);
-// => "Male"
-console.log(olli instanceof Male);
-// => true
-console.log(olli instanceof Person);
-// => true
-console.log(olli instanceof Object);
-// => true
+
+/**
+ * @type {Female}
+ */
+var oma = new Female("Oma");
+console.log(oma.getName());
+// => "Mrs Oma"
+
+/**
+ *
+ * @type {Array.<Person>}
+ */
+var personen = [oma, olli];
+personen.forEach(function (p) {
+    console.log(p.getName());
+});
+// => "Mrs Oma"
+// => "Mr Olli"
