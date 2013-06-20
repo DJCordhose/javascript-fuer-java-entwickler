@@ -1,5 +1,10 @@
 "use strict";
 
+// beide false
+console.log(-1 == true);
+console.log(-1 == false);
+
+// Die ergeben alle true
 console.log("dog" == "dog");
 console.log(1 == true);
 console.log(2 != false);

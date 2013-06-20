@@ -42,8 +42,8 @@ Person.prototype.getName = function () {
 function Male(name) {
     Person.call(this, name, "Male");
 }
-//_extendsSimple(Male, Person);
-_extends(Male, Person);
+_extendsSimple(Male, Person);
+//_extends(Male, Person);
 
 /**
  * Gibt den Namen einer männlichen Person zurück.

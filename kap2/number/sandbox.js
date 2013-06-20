@@ -27,9 +27,13 @@ console.log(float2.toFixed(2));
 
 console.log(1 / 0);
 // => Infinity
+console.log(typeof (1 / 0));
+// => "number";
 
 console.log(0 / 0);
 // => NaN
+console.log(typeof (0 / 0));
+// => "number";
 
 console.log(0 / "a");
 // => NaN

@@ -24,10 +24,16 @@
 (function() {
     console.log("func inner1 vor Deklaration: " + inner1);
     // => function inner1() {}
+    inner1();
+    // => Inner1
     console.log("func inner2 vor Deklaration: " + inner2);
     // => undefined
-    var inner1 = function() {};
-    function inner2() {}
+    function inner1() {
+        console.log("Inner1");
+    };
+    var inner2 = function () {
+        console.log("Inner2");
+    }
 })();
 
 // global
