@@ -20,8 +20,15 @@ eu.zeigermann.person = {};
 
 eu.zeigermann.main = {};
 (function (main, person) {
-    var olli = person.CreatePerson("Olli");
-    console.log(olli.name); // => "Olli"
+    function Main() {
+        var olli = person.CreatePerson("Olli");
+        console.log(olli.name);
+         // => "Olli"
 
-    console.log(person.Person); // => undefined
+        console.log(person.Person);
+         // => undefined
+    }
+    main.Main = Main;
 })(eu.zeigermann.main, eu.zeigermann.person);
+
+eu.zeigermann.main.Main();

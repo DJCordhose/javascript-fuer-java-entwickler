@@ -11,6 +11,11 @@ function _extends(_sub, _super) {
     _sub.prototype.constructor = _sub;
 }
 
+function _extendsCreate(_sub, _super) {
+    _sub.prototype = Object.create(_super.prototype);
+    _sub.prototype.constructor = _sub;
+}
+
 /**
  * Erzeugt eine Person
  *
@@ -42,8 +47,9 @@ Person.prototype.getName = function () {
 function Male(name) {
     Person.call(this, name, "Male");
 }
-//_extendsSimple(Male, Person);
-_extends(Male, Person);
+_extendsSimple(Male, Person);
+//_extends(Male, Person);
+//_extendsCreate(Male, Person);
 
 console.log(Object.getPrototypeOf(Male.prototype) === Person.prototype);
 // => true
