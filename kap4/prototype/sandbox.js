@@ -34,6 +34,9 @@ console.log(name);
 
 console.log(olli.prototype);
 // => undefined
+console.log(Object.getPrototypeOf(olli));
+// => Person {getName: function}
+
 console.log(Object.getPrototypeOf(olli) === Person.prototype);
 // => true
 console.log(Object.getPrototypeOf(Object.getPrototypeOf(olli)) === Object.prototype);

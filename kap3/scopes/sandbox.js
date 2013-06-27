@@ -8,7 +8,7 @@
 console.log(a); // => 10
 
 // So macht man Sichtbarkeitsbereiche
-(function(){
+(function () {
   var b = 10;
   console.log("Noch bin ich da: " + b);
 })();
@@ -25,6 +25,13 @@ anonFunc();
 console.log(typeof b);
 // => undefined
 
+// Leicht andere Klammerung
+(function () {
+    var b = 10;
+    console.log("Noch bin ich da: " + b);
+}());
+console.log(typeof b);
+// => undefined
 
 // Verschachtelte Sichtbarkeitsbereiche
 console.log("Verschachtelte Sichtbarkeitsbereiche");

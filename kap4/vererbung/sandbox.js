@@ -5,9 +5,16 @@ function _extendsSimple(_sub, _super) {
 }
 
 function _extends(_sub, _super) {
-    var IntermediateProto = function () {};
-    IntermediateProto.prototype = _super.prototype;
-    _sub.prototype = new IntermediateProto();
+    // Variante der Konstruktor-Funktion _super
+    // Hat dieselbe Prototype-Property,
+    // tut aber sonst nichts
+    var __ = function () {};
+    __.prototype = _super.prototype;
+
+    // Das kennen wir schon aus _extendsSimple
+    _sub.prototype = new __();
+
+    // Setzt der Konstruktor-Property
     _sub.prototype.constructor = _sub;
 }
 

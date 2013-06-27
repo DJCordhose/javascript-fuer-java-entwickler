@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 //function oho() {
 //    "use strict";
@@ -16,5 +16,5 @@ function aha() {
 
 aha();
 
-//console.log(hugo);
+console.log(hugo);
 
