@@ -1,5 +1,5 @@
-javascript-fuer-java-entwickler
-===============================
+JavaScript für Java-Entwickler
+==============================
 
 Alle Beispiele aus dem Buch "JavaScript für Java-Entwickler"
 
